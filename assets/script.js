@@ -40,14 +40,14 @@ timeElArr = [time9am, time10am, time11am, time12pm, time1pm,
 function timeUpdate() {
     let today = dayjs();
 
-    $('#currentDay').text(today.format("dddd, MMMM DD YYYY, h:mm:ss"));
+    $('#currentDay').text(today.format("dddd, MMMM DD h:mm:ss"));
 
     let current = dayjs().format('HH');
     for (let i = 0; i < timeElArr.length; i++){
         timeElArr[i].removeClass("future", "past", "present");
         if (current > timeElArr[i].data('hour')) {
             timeElArr[i].addClass("past");
-        }else if (now === timeElArr[i].attr('data-hour')) {
+        }else if (current === timeElArr[i].attr('data-hour')) {
             timeElArr[i].addClass("present");
         }else {
             timeElArr[i].addClass("future");
@@ -75,7 +75,7 @@ saveBtn.on('click', Submit);
 
 function renderLastSaved() {
     for (let el of timeElArr) {
-        el.val(localStorage.getItem("time block " + el.data(hour)));
+        el.val(localStorage.getItem("time block " + el.data("hour")));
     }
 }
 
