@@ -1,4 +1,4 @@
-# week-5-challenge: Work Day Scheduler (Third Party API's)
+# Week 5 Challenge: Work Day Scheduler (Third Party API's)
 
 ## User Story
 AS AN employee with a busy schedule
@@ -21,7 +21,7 @@ THEN the text for that event is saved in local storage
 WHEN I refresh the page
 THEN the saved events persist
 
-![example screenshot](assets/s.png)
+![example screenshot](assets/wk5challengeimg.png)
 
 ## Link to Page
-[Click to view page](https://rikuchoy.github.io/week-4-challenge/)
+[Click to view page](https://rikuchoy.github.io/week-5-challenge/)
